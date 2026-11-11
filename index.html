@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check current weather conditions for cities around the world.">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Weather Dashboard</h1>
+            <p>Discover the weather in your city</p>
+        </header>
+
+        <section class="search-section">
+            <form id="search-form">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Enter a city name..."
+                    aria-label="Enter city name"
+                    required
+                >
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </section>
+
+        <p id="status-message" role="status" aria-live="polite"></p>
+
+        <section id="weather-card" class="weather-card" hidden>
+
+            <div class="weather-header">
+                <h2 id="city-name">City Name</h2>
+                <img id="weather-icon" src="" alt="Weather icon">
+                <p id="weather-description">Weather description</p>
+            </div>
+
+            <div class="temperature">
+                <span id="temperature">--</span>
+                <span>°C</span>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail">
+                    <h3>Feels Like</h3>
+                    <p><span id="feels-like">--</span> °C</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Humidity</h3>
+                    <p><span id="humidity">--</span>%</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Wind Speed</h3>
+                    <p><span id="wind-speed">--</span> m/s</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Pressure</h3>
+                    <p><span id="pressure">--</span> hPa</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="history-section">
+            <h2>Recent Searches</h2>
+            <ul id="search-history"></ul>
+        </section>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
